@@ -27,7 +27,15 @@ public class DeveloperTest { //defines a public alss in a JUnit test class for d
         assertEquals("Saeed A", Developer.getName());
     }
 
+    @Test
+    public void getGithubId_returns_correct_githubId(){
+        assertEquals("saeed-ar", Developer.getGithubId());
+    }
+
     // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
     // 100% mutation coverage (all mutants timed out or killed)
+
+
+
 
 }
