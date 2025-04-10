@@ -22,8 +22,6 @@ public class DeveloperTest { //defines a public alss in a JUnit test class for d
 
     @Test
     public void getName_returns_correct_name() {
-        // TODO: Replace Chris G. with your name as shown on
-        // <https://bit.ly/cs156-s25-teams>
         assertEquals("Saeed A", Developer.getName());
     }
 
@@ -31,6 +29,30 @@ public class DeveloperTest { //defines a public alss in a JUnit test class for d
     public void getGithubId_returns_correct_githubId(){
         assertEquals("saeed-ar", Developer.getGithubId());
     }
+
+    @Test
+    public void getTeam_returns_team_with_correct_name() {
+        Team  t = Developer.getTeam();
+        assertEquals("s25-06", t.getName());
+    }
+
+
+
+
+
+    @Test
+    public void getTeam_returns_team_with_correct_members() {
+        Team  t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Rachit G"),"Team should contain Rachit G");
+        assertTrue(t.getMembers().contains("Riya G"),"Team should contain Riya G");
+        assertTrue(t.getMembers().contains("Sanjana J"),"Team should contain Sanjana J");
+        assertTrue(t.getMembers().contains("Yarwin L"),"Team should contain Yarwin L");
+        assertTrue(t.getMembers().contains("Aryan C"),"Team should contain Aryan C");
+        assertTrue(t.getMembers().contains("Saeed A"),"Team should contain Saeed A");
+        // ... etc
+    }
+
+
 
     // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
     // 100% mutation coverage (all mutants timed out or killed)
